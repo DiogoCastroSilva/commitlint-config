@@ -15,7 +15,7 @@ This is a CommitLint config that you can use in your projects.
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="commitlint-config is released under the MIT license." />
   </a>
   <a href="https://www.npmjs.com/package/@diogozx-org/commitlint-config">
-    <img src="https://img.shields.io/npm/v/@diogozx/commitlint-config.svg" alt="Current npm package version." />
+    <img src="https://img.shields.io/npm/v/@diogozx-org/commitlint-config.svg" alt="Current npm package version." />
   </a>
 </p>
 
