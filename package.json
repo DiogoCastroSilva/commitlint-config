@@ -1,14 +1,14 @@
 {
   "name": "@diogozx-org/commitlint-config",
-  "version": "1.0.0",
-  "description": "An CommitLint config standard for my projects",
+  "version": "1.0.1",
+  "description": "A shared Commitlint configuration for my projects",
   "author": "Diogo Silva",
   "homepage": "https://github.com/DiogoCastroSilva/commitlint-config#readme",
   "main": "index.js",
   "license": "MIT",
-  "type": "module",
   "scripts": {
-    "commit": "npx git-cz"
+    "commit": "npx git-cz",
+    "test": "node --test"
   },
   "publishConfig": {
     "access": "public"
@@ -26,12 +26,15 @@
     "commitlint-config"
   ],
   "engines": {
-    "node": ">=v10"
+    "node": ">=18"
+  },
+  "dependencies": {
+    "conventional-changelog-conventionalcommits": "^4.3.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "13.1.0",
-    "@commitlint/config-conventional": "13.1.0",
-    "commitizen": "4.2.4",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "commitizen": "^4.2.4",
     "cz-conventional-changelog": "3.3.0"
   },
   "config": {
