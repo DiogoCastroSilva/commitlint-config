@@ -1,57 +1,67 @@
-<h1 align="center">
-  commitlint-config
-</h1>
+# Commitlint Config
 
-<h3 align="center">
-  An CommitLint config standard for my projects
-</h3>
+A reusable [Commitlint](https://commitlint.js.org/) configuration for projects that follow Conventional Commits.
 
-<p align="center">
-This is a CommitLint config that you can use in your projects.
-</p>
+## Requirements
 
-<p align="center">
-  <a href="https://github.com/DiogoCastroSilva/commitlint-config/blob/master/LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="commitlint-config is released under the MIT license." />
-  </a>
-  <a href="https://www.npmjs.com/package/@diogozx-org/commitlint-config">
-    <img src="https://img.shields.io/npm/v/@diogozx-org/commitlint-config.svg" alt="Current npm package version." />
-  </a>
-</p>
+- Node.js 18 or newer
+- npm or Yarn
+- [Commitlint CLI](https://www.npmjs.com/package/@commitlint/cli) installed in the consuming project
 
-## 🚀 Get Up and Running
+## Install
 
-You can install this package using either **npm** or **yarn**.
+Install this package in your project:
 
-### **Yarn**
-
-If using Yarn:
-
-1. Install the package as a development dependency:
-
-```shell
-yarn add @diogozx/commitlint-config --dev
+```sh
+npm install --save-dev @diogozx-org/commitlint-config @commitlint/cli
 ```
 
+Or with Yarn:
 
-### **NPM**
-
-If using NPM:
-
-1. Install the package as a development dependency:
-
-```shell
-npm install @diogozx/commitlint-config --save-dev
+```sh
+yarn add --dev @diogozx-org/commitlint-config @commitlint/cli
 ```
 
-### Install commitizen if it's not already installed
-- https://commitizen-tools.github.io/commitizen/
+## Configure
 
+Create `commitlint.config.cjs` in the root of your project:
 
-### Create a config file
-1. Create an `.commitlint.config.js`  file in the root of your project and add the following code:
-``` js
+```js
 module.exports = {
-  extends: ['@diogozx/commitlint-config'],
+  extends: ['@diogozx-org/commitlint-config'],
 };
 ```
+
+The `.cjs` extension makes the CommonJS module format explicit, regardless of your project's `package.json` module type.
+
+## Rules
+
+This config uses Conventional Commits and enforces:
+
+- A maximum header length of 100 characters
+- Lowercase commit types from this list: `build`, `chore`, `ci`, `docs`, `feat`, `fix`, `perf`, `refactor`, `revert`, `style`, and `test`
+- A non-empty subject without a trailing period
+- Body and footer lines no longer than 100 characters, with a blank line before each section
+
+Example:
+
+```text
+feat: add juror search
+
+Add a searchable list of jurors to the trial workspace.
+```
+
+## Optional: Commitizen
+
+This repository also uses [Commitizen](https://commitizen-tools.github.io/commitizen/) for composing commits. Commitizen is a commit-writing helper, not a requirement for using this Commitlint configuration. Install and configure it separately if you want interactive commit prompts.
+
+## Development
+
+```sh
+yarn install --frozen-lockfile
+yarn test
+``
+
+## License
+
+MIT
