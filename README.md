@@ -1,5 +1,7 @@
 # Commitlint Config
 
+[![npm version](https://img.shields.io/npm/v/%40diogozx-org%2Fcommitlint-config)](https://www.npmjs.com/package/@diogozx-org/commitlint-config)
+
 A reusable [Commitlint](https://commitlint.js.org/) configuration for projects that follow Conventional Commits.
 
 ## Requirements
